@@ -1,4 +1,4 @@
-package UnionFind;
+package UnionFind.QuickFind;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package UnionFind;//Quick Find
+package UnionFind.QuickFind;//Quick Find
 //eager approach
 //Too slow
 
