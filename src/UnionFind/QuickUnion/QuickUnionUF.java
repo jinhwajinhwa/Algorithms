@@ -5,6 +5,7 @@ package UnionFind.QuickUnion;//Quick Union
 public class QuickUnionUF {
 
     private int[] id;
+    private int[] sz;
 
     public QuickUnionUF(int N)
     {
@@ -28,6 +29,15 @@ public class QuickUnionUF {
     {
         int i=root(p);
         int j=root(q);
+
+        //way1. original quick union
         id[i] = j;
+
+        //way2. quick union improvement
+        if(i==j) return;
+        if (sz[i] < sz[j]) { id[i] = j; sz[j] += sz[i]; }
+        else {id[j]=i; sz[j] += sz[i];}
+
+
     }
 }
